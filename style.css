@@ -5,6 +5,10 @@ body {
     margin: 30px;
 }
 
+.lekce-okno {
+  display: none;
+}
+
 footer {
     text-align: center;
 }
