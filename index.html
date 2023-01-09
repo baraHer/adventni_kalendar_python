@@ -9,33 +9,42 @@
 </head>
 <body>
     <h1>Python</h1>
-    <a href="instrukce.html">Instrukce</a>
+    <a class="instrukce-odkaz" href="instrukce.html">Instrukce</a>
+
+    <button onclick="zobrazOkno(1)">1</button>
+    <button onclick="zobrazOkno(2)">2</button>
+    <button onclick="zobrazOkno(3)">3</button>
+    <button onclick="zobrazOkno(4)">4</button>    
+    <button onclick="zavriOkno()">close</button>
 
     <div class="lekce-okno">
-      <div class="lekce-obsah" id="d1">1</div>
-      <div class="lekce-obsah" id="d2">2</div>
-      <div class="lekce-obsah" id="d3">3</div>
-      <div class="lekce-obsah" id="d4">4</div>
-      <div class="lekce-obsah" id="d5"></div>
-      <div class="lekce-obsah" id="d6"></div>
-      <div class="lekce-obsah" id="d7"></div>
-      <div class="lekce-obsah" id="d8"></div>
-      <div class="lekce-obsah" id="d9"></div>
-      <div class="lekce-obsah" id="d10"></div>
-      <div class="lekce-obsah" id="d11"></div>
-      <div class="lekce-obsah" id="d12"></div>
-      <div class="lekce-obsah" id="d13"></div>
-      <div class="lekce-obsah" id="d14"></div>
-      <div class="lekce-obsah" id="d15"></div>
-      <div class="lekce-obsah" id="d16"></div>
-      <div class="lekce-obsah" id="d17"></div>
-      <div class="lekce-obsah" id="d18"></div>
-      <div class="lekce-obsah" id="d19"></div>
-      <div class="lekce-obsah" id="d20"></div>
-      <div class="lekce-obsah" id="d21"></div>
-      <div class="lekce-obsah" id="d22"></div>
-      <div class="lekce-obsah" id="d23"></div>
-      <div class="lekce-obsah" id="d24"></div>
+        <button class="button-prev" onclick="zobrazPredchoziLekci(cisloZobrazeneLekce)">predchozi</button>
+        <button class="button-next" onclick="zobrazNasledujiciLekci(cisloZobrazeneLekce)">dalsi</button>
+
+        <div class="lekce-obsah" id="d1">1</div>
+        <div class="lekce-obsah" id="d2">2</div>
+        <div class="lekce-obsah" id="d3">3</div>
+        <div class="lekce-obsah" id="d4">4</div>
+        <div class="lekce-obsah" id="d5"></div>
+        <div class="lekce-obsah" id="d6"></div>
+        <div class="lekce-obsah" id="d7"></div>
+        <div class="lekce-obsah" id="d8"></div>
+        <div class="lekce-obsah" id="d9"></div>
+        <div class="lekce-obsah" id="d10"></div>
+        <div class="lekce-obsah" id="d11"></div>
+        <div class="lekce-obsah" id="d12"></div>
+        <div class="lekce-obsah" id="d13"></div>
+        <div class="lekce-obsah" id="d14"></div>
+        <div class="lekce-obsah" id="d15"></div>
+        <div class="lekce-obsah" id="d16"></div>
+        <div class="lekce-obsah" id="d17"></div>
+        <div class="lekce-obsah" id="d18"></div>
+        <div class="lekce-obsah" id="d19"></div>
+        <div class="lekce-obsah" id="d20"></div>
+        <div class="lekce-obsah" id="d21"></div>
+        <div class="lekce-obsah" id="d22"></div>
+        <div class="lekce-obsah" id="d23"></div>
+        <div class="lekce-obsah" id="d24"></div>
     </div>
     
     <footer>GJK 2022/2023</footer>
