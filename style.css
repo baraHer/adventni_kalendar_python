@@ -1,7 +1,8 @@
 body {
     color: chartreuse;
     background-color: black;
-
+    font-family: 'Courier Prime', monospace;
+    
     margin: 30px;
 }
 
