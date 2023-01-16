@@ -14,3 +14,7 @@
         animace
     responzivita
     
+    barvy
+    včera - 81DB57
+    dnes - 0AFF16
+    zítra - 126915
