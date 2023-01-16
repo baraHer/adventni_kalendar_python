@@ -35,3 +35,15 @@ const zobrazPredchoziLekci = (soucasnaLekce) => {
 const zavriOkno = () => {
     oknoLekce.style.display = "none";
 }
+
+function valiDate(day){
+	let mesicKdySeKalendarAplikuje = 1 ; /* Nastavit cislo podle mesice 0-11 (0 = Leden, 1 unor,prosinec = 11 aj.) */
+	const today = new Date();
+
+	if(	today.getDate() >= day && today.getMonth() == mesicKdySeKalendarAplikuje){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
