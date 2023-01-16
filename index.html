@@ -39,10 +39,11 @@
     <button id="b23" onclick="zobrazOkno(23)">23</button>
     <button id="b24" onclick="zobrazOkno(24)">24</button>
 
+    <div onclick="zavriOkno()" class="okno-pozadi"></div>
     <div class="lekce-okno">
-        <button class="button-prev" onclick="zobrazPredchoziLekci(cisloZobrazeneLekce)">predchozi</button>
-        <button class="button-next" onclick="zobrazNasledujiciLekci(cisloZobrazeneLekce)">dalsi</button>    
-        <button onclick="zavriOkno()">close</button>
+        <button class="button-prev" onclick="zobrazPredchoziLekci(cisloZobrazeneLekce)">&#60;--</button>
+        <button class="button-next" onclick="zobrazNasledujiciLekci(cisloZobrazeneLekce)">&#62;--</button>    
+        <button onclick="zavriOkno()">X</button>
 
         <div class="lekce-obsah" id="d1">1</div>
         <div class="lekce-obsah" id="d2">2</div>
