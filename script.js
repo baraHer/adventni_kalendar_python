@@ -1,6 +1,7 @@
 const obsahLekceElement = document.querySelectorAll(".lekce-obsah");
 const oknoLekce = document.querySelector(".lekce-okno")
 const oknoLekcePozadi = document.querySelector(".okno-pozadi")
+const oknoBorder = document.querySelector(".okno-border")
 const matrixButtony = document.querySelectorAll(".matrix-button")
 
 const tlacitkoPredchozi = document.querySelector(".button-prev")
@@ -35,6 +36,7 @@ const zobrazOkno = (cisloDne) => {
 
     oknoLekce.style.display = "block";
     oknoLekcePozadi.style.display = "block";
+    oknoBorder.style.display = "block";
     cisloZobrazeneLekce = cisloDne
 }
 
@@ -49,6 +51,7 @@ const zobrazPredchoziLekci = (soucasnaLekce) => {
 const zavriOkno = () => {
     oknoLekce.style.display = "none";
     oknoLekcePozadi.style.display = "none";
+    oknoBorder.style.display = "none";
 }
 
 function valiDate(day){
