@@ -10,6 +10,19 @@ body {
     text-decoration: none;
 }
 
+button {
+  border: none;
+  color: chartreuse;
+  background-color: black;
+}
+
+.text-button {
+  font-family: 'Courier Prime', monospace;
+  padding: 0.6rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 .okno-pozadi {
     display: none;
     position: fixed;

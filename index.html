@@ -7,37 +7,374 @@
     <title>Advetní kalendář - Python</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Python</h1>
-    <a class="instrukce-odkaz" href="instrukce.html">Instrukce</a>
-
-    <button id="b1" onclick="zobrazOkno(1)">1</button>
-    <button id="b2" onclick="zobrazOkno(2)">2</button>
-    <button id="b3" onclick="zobrazOkno(3)">3</button>
-    <button id="b4" onclick="zobrazOkno(4)">4</button>
-    <button id="b5" onclick="zobrazOkno(5)">5</button>
-    <button id="b6" onclick="zobrazOkno(6)">6</button>
-    <button id="b7" onclick="zobrazOkno(7)">7</button>
-    <button id="b8" onclick="zobrazOkno(8)">8</button>
-    <button id="b9" onclick="zobrazOkno(9)">9</button>
-    <button id="b10" onclick="zobrazOkno(10)">10</button>
-    <button id="b11" onclick="zobrazOkno(11)">11</button>
-    <button id="b12" onclick="zobrazOkno(12)">12</button>
-    <button id="b13" onclick="zobrazOkno(13)">13</button>
-    <button id="b14" onclick="zobrazOkno(14)">14</button>
-    <button id="b15" onclick="zobrazOkno(15)">15</button>
-    <button id="b16" onclick="zobrazOkno(16)">16</button>
-    <button id="b17" onclick="zobrazOkno(17)">17</button>
-    <button id="b18" onclick="zobrazOkno(18)">18</button>
-    <button id="b19" onclick="zobrazOkno(19)">19</button>
-    <button id="b20" onclick="zobrazOkno(20)">20</button>
-    <button id="b21" onclick="zobrazOkno(21)">21</button>
-    <button id="b22" onclick="zobrazOkno(22)">22</button>
-    <button id="b23" onclick="zobrazOkno(23)">23</button>
-    <button id="b24" onclick="zobrazOkno(24)">24</button>
+    <button id="b1" onclick="zobrazOkno(1)">
+      <div class="text-button">p</div>
+      <div class="text-button">r</div>
+      <div class="text-button">o</div>
+      <div class="text-button">m</div>
+      <div class="text-button">ě</div>
+      <div class="text-button">n</div>
+      <div class="text-button">n</div>
+      <div class="text-button">é</div>
+      <div class="text-button"></div>
+      <div class="text-button">1</div>
+    </button>
+    <button id="b2" onclick="zobrazOkno(2)">
+      <div class="text-button">m</div>
+      <div class="text-button">a</div>
+      <div class="text-button">t</div>
+      <div class="text-button">e</div>
+      <div class="text-button">m</div>
+      <div class="text-button">a</div>
+      <div class="text-button">t</div>
+      <div class="text-button">i</div>
+      <div class="text-button">c</div>
+      <div class="text-button">k</div>
+      <div class="text-button">é</div>
+      <div class="text-button"></div>
+      <div class="text-button">o</div>
+      <div class="text-button">p</div>
+      <div class="text-button">e</div>
+      <div class="text-button">r</div>
+      <div class="text-button">a</div>
+      <div class="text-button">c</div>
+      <div class="text-button">e</div>
+      <div class="text-button"></div>
+      <div class="text-button">2</div>
+    </button>
+    <button id="b3" onclick="zobrazOkno(3)">
+      <div class="text-button">s</div>
+      <div class="text-button">e</div>
+      <div class="text-button">z</div>
+      <div class="text-button">n</div>
+      <div class="text-button">a</div>
+      <div class="text-button">m</div>
+      <div class="text-button">y</div>
+      <div class="text-button"></div>
+      <div class="text-button">3</div>
+    </button>
+    <button id="b4" onclick="zobrazOkno(4)">
+      <div class="text-button">f</div>
+      <div class="text-button">u</div>
+      <div class="text-button">n</div>
+      <div class="text-button">k</div>
+      <div class="text-button">c</div>
+      <div class="text-button">e</div>
+      <div class="text-button"></div>
+      <div class="text-button">4</div>
+    </button>
+    <button id="b5" onclick="zobrazOkno(5)">
+      <div class="text-button">d</div>
+      <div class="text-button">a</div>
+      <div class="text-button">t</div>
+      <div class="text-button">o</div>
+      <div class="text-button">v</div>
+      <div class="text-button">é</div>
+      <div class="text-button"></div>
+      <div class="text-button">t</div>
+      <div class="text-button">y</div>
+      <div class="text-button">p</div>
+      <div class="text-button">y</div>
+      <div class="text-button"></div>
+      <div class="text-button">5</div>
+    </button>
+    <button id="b6" onclick="zobrazOkno(6)">
+      <div class="text-button">t</div>
+      <div class="text-button">ř</div>
+      <div class="text-button">í</div>
+      <div class="text-button">d</div>
+      <div class="text-button">y</div>
+      <div class="text-button"></div>
+      <div class="text-button">6</div>
+    </button>
+    <button id="b7" onclick="zobrazOkno(7)">
+      <div class="text-button">v</div>
+      <div class="text-button">ý</div>
+      <div class="text-button">j</div>
+      <div class="text-button">i</div>
+      <div class="text-button">m</div>
+      <div class="text-button">k</div>
+      <div class="text-button">y</div>
+      <div class="text-button"></div>
+      <div class="text-button">7</div>
+    </button>
+    <button id="b8" onclick="zobrazOkno(8)">
+      <div class="text-button">d</div>
+      <div class="text-button">ě</div>
+      <div class="text-button">d</div>
+      <div class="text-button">i</div>
+      <div class="text-button">č</div>
+      <div class="text-button">n</div>
+      <div class="text-button">o</div>
+      <div class="text-button">s</div>
+      <div class="text-button">t</div>
+      <div class="text-button"></div>
+      <div class="text-button">8</div>
+    </button>
+    <button id="b9" onclick="zobrazOkno(9)">
+      <div class="text-button">i</div>
+      <div class="text-button">n</div>
+      <div class="text-button">t</div>
+      <div class="text-button">e</div>
+      <div class="text-button">r</div>
+      <div class="text-button">p</div>
+      <div class="text-button">r</div>
+      <div class="text-button">e</div>
+      <div class="text-button">t</div>
+      <div class="text-button">o</div>
+      <div class="text-button">v</div>
+      <div class="text-button">a</div>
+      <div class="text-button">n</div>
+      <div class="text-button">ý</div>
+      <div class="text-button"></div>
+      <div class="text-button">j</div>
+      <div class="text-button">a</div>
+      <div class="text-button">z</div>
+      <div class="text-button">y</div>
+      <div class="text-button">k</div>
+      <div class="text-button"></div>
+      <div class="text-button">9</div>
+    </button>
+    <button id="b10" onclick="zobrazOkno(10)">
+      <div class="text-button">d</div>
+      <div class="text-button">a</div>
+      <div class="text-button">t</div>
+      <div class="text-button">o</div>
+      <div class="text-button">v</div>
+      <div class="text-button">á</div>
+      <div class="text-button"></div>
+      <div class="text-button">a</div>
+      <div class="text-button">n</div>
+      <div class="text-button">a</div>
+      <div class="text-button">l</div>
+      <div class="text-button">ý</div>
+      <div class="text-button">z</div>
+      <div class="text-button">a</div>
+      <div class="text-button"></div>
+      <div class="text-button">10</div>
+    </button>
+    <button id="b11" onclick="zobrazOkno(11)">
+      <div class="text-button">s</div>
+      <div class="text-button">y</div>
+      <div class="text-button">n</div>
+      <div class="text-button">t</div>
+      <div class="text-button">a</div>
+      <div class="text-button">x</div>
+      <div class="text-button">e</div>
+      <div class="text-button"></div>
+      <div class="text-button">11</div>
+    </button>
+    <button id="b12" onclick="zobrazOkno(12)">
+      <div class="text-button">p</div>
+      <div class="text-button">o</div>
+      <div class="text-button">d</div>
+      <div class="text-button">m</div>
+      <div class="text-button">í</div>
+      <div class="text-button">n</div>
+      <div class="text-button">k</div>
+      <div class="text-button">y</div>
+      <div class="text-button"></div>
+      <div class="text-button">12</div>
+    </button>
+    <button id="b13" onclick="zobrazOkno(13)">
+      <div class="text-button">c</div>
+      <div class="text-button">y</div>
+      <div class="text-button">k</div>
+      <div class="text-button">l</div>
+      <div class="text-button">y</div>
+      <div class="text-button"></div>
+      <div class="text-button">13</div>
+    </button>
+    <button id="b14" onclick="zobrazOkno(14)">
+      <div class="text-button">f</div>
+      <div class="text-button">r</div>
+      <div class="text-button">a</div>
+      <div class="text-button">m</div>
+      <div class="text-button">e</div>
+      <div class="text-button">w</div>
+      <div class="text-button">o</div>
+      <div class="text-button">r</div>
+      <div class="text-button">k</div>
+      <div class="text-button"></div>
+      <div class="text-button">d</div>
+      <div class="text-button">j</div>
+      <div class="text-button">a</div>
+      <div class="text-button">n</div>
+      <div class="text-button">g</div>
+      <div class="text-button">o</div>
+      <div class="text-button"></div>
+      <div class="text-button">14</div>
+    </button>
+    <button id="b15" onclick="zobrazOkno(15)">
+      <div class="text-button">s</div>
+      <div class="text-button">t</div>
+      <div class="text-button">r</div>
+      <div class="text-button">o</div>
+      <div class="text-button">j</div>
+      <div class="text-button">o</div>
+      <div class="text-button">v</div>
+      <div class="text-button">é</div>
+      <div class="text-button"></div>
+      <div class="text-button">u</div>
+      <div class="text-button">č</div>
+      <div class="text-button">e</div>
+      <div class="text-button">n</div>
+      <div class="text-button">í</div>
+      <div class="text-button"></div>
+      <div class="text-button">15</div>
+    </button>
+    <button id="b16" onclick="zobrazOkno(16)">
+      <div class="text-button">k</div>
+      <div class="text-button">n</div>
+      <div class="text-button">i</div>
+      <div class="text-button">h</div>
+      <div class="text-button">o</div>
+      <div class="text-button">v</div>
+      <div class="text-button">n</div>
+      <div class="text-button">y</div>
+      <div class="text-button"></div>
+      <div class="text-button">16</div>
+    </button>
+    <button id="b17" onclick="zobrazOkno(17)">
+      <div class="text-button">l</div>
+      <div class="text-button">o</div>
+      <div class="text-button">g</div>
+      <div class="text-button">i</div>
+      <div class="text-button">c</div>
+      <div class="text-button">k</div>
+      <div class="text-button">é</div>
+      <div class="text-button"></div>
+      <div class="text-button">o</div>
+      <div class="text-button">p</div>
+      <div class="text-button">e</div>
+      <div class="text-button">r</div>
+      <div class="text-button">á</div>
+      <div class="text-button">t</div>
+      <div class="text-button">o</div>
+      <div class="text-button">r</div>
+      <div class="text-button">y</div>
+      <div class="text-button"></div>
+      <div class="text-button">17</div>
+    </button>
+    <button id="b18" onclick="zobrazOkno(18)">
+      <div class="text-button">s</div>
+      <div class="text-button">l</div>
+      <div class="text-button">o</div>
+      <div class="text-button">v</div>
+      <div class="text-button">n</div>
+      <div class="text-button">í</div>
+      <div class="text-button">k</div>
+      <div class="text-button">y</div>
+      <div class="text-button"></div>
+      <div class="text-button">18</div>
+    </button>
+    <button id="b19" onclick="zobrazOkno(19)">
+      <div class="text-button">o</div>
+      <div class="text-button">b</div>
+      <div class="text-button">j</div>
+      <div class="text-button">e</div>
+      <div class="text-button">k</div>
+      <div class="text-button">t</div>
+      <div class="text-button">y</div>
+      <div class="text-button"></div>
+      <div class="text-button">19</div>
+    </button>
+    <button id="b20" onclick="zobrazOkno(20)">
+      <div class="text-button">s</div>
+      <div class="text-button">é</div>
+      <div class="text-button">m</div>
+      <div class="text-button">a</div>
+      <div class="text-button">n</div>
+      <div class="text-button">t</div>
+      <div class="text-button">i</div>
+      <div class="text-button">k</div>
+      <div class="text-button">a</div>
+      <div class="text-button"></div>
+      <div class="text-button">20</div>
+    </button>
+    <button id="b21" onclick="zobrazOkno(21)">
+      <div class="text-button">p</div>
+      <div class="text-button">ř</div>
+      <div class="text-button">í</div>
+      <div class="text-button">k</div>
+      <div class="text-button">a</div>
+      <div class="text-button">z</div>
+      <div class="text-button">o</div>
+      <div class="text-button">v</div>
+      <div class="text-button">á</div>
+      <div class="text-button"></div>
+      <div class="text-button">ř</div>
+      <div class="text-button">á</div>
+      <div class="text-button">d</div>
+      <div class="text-button">k</div>
+      <div class="text-button">a</div>
+      <div class="text-button"></div>
+      <div class="text-button">21</div>
+    </button>
+    <button id="b22" onclick="zobrazOkno(22)">
+      <div class="text-button">k</div>
+      <div class="text-button">ó</div>
+      <div class="text-button">d</div>
+      <div class="text-button"></div>
+      <div class="text-button">22</div>
+    </button>
+    <button id="b23" onclick="zobrazOkno(23)">
+      <div class="text-button">p</div>
+      <div class="text-button">r</div>
+      <div class="text-button">o</div>
+      <div class="text-button">g</div>
+      <div class="text-button">r</div>
+      <div class="text-button">a</div>
+      <div class="text-button">m</div>
+      <div class="text-button"></div>
+      <div class="text-button">23</div>
+    </button>
+    <button id="b24" onclick="zobrazOkno(24)">
+      <div class="text-button">f</div>
+      <div class="text-button">r</div>
+      <div class="text-button">o</div>
+      <div class="text-button">n</div>
+      <div class="text-button">t</div>
+      <div class="text-button">e</div>
+      <div class="text-button">n</div>
+      <div class="text-button">d</div>
+      <div class="text-button"></div>
+      <div class="text-button">a</div>
+      <div class="text-button"></div>
+      <div class="text-button">b</div>
+      <div class="text-button">a</div>
+      <div class="text-button">c</div>
+      <div class="text-button">k</div>
+      <div class="text-button">e</div>
+      <div class="text-button">n</div>
+      <div class="text-button">d</div>
+      <div class="text-button"></div>
+      <div class="text-button">24</div>
+    </button>
+    <button id="b0" onclick="zobrazOkno(0)">
+      <div class="text-button">p</div>
+      <div class="text-button">a</div>
+      <div class="text-button">r</div>
+      <div class="text-button">a</div>
+      <div class="text-button">m</div>
+      <div class="text-button">e</div>
+      <div class="text-button">t</div>
+      <div class="text-button">r</div>
+      <div class="text-button">y</div>
+      <div class="text-button"></div>
+      <div class="text-button">f</div>
+      <div class="text-button">u</div>
+      <div class="text-button">n</div>
+      <div class="text-button">k</div>
+      <div class="text-button">c</div>
+      <div class="text-button">í</div>
+      <div class="text-button"></div>
+      <div class="text-button">0</div>
+    </button>
 
     <div onclick="zavriOkno()" class="okno-pozadi"></div>
     <div class="lekce-okno">
@@ -45,6 +382,7 @@
         <button class="button-next" onclick="zobrazNasledujiciLekci(cisloZobrazeneLekce)">--&#62;</button>    
         <button onclick="zavriOkno()">X</button>
 
+        <div class="lekce-obsah" id="d0">0</div>
         <div class="lekce-obsah" id="d1">1</div>
         <div class="lekce-obsah" id="d2">2</div>
         <div class="lekce-obsah" id="d3">3</div>
