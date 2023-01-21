@@ -5,9 +5,11 @@ body {
     margin: 30px;
 }
 
-.instrukce-odkaz {
-    color: chartreuse;
-    text-decoration: none;
+.matrix-text {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 button {

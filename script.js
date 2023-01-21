@@ -1,10 +1,22 @@
 const obsahLekceElement = document.querySelectorAll(".lekce-obsah");
 const oknoLekce = document.querySelector(".lekce-okno")
 const oknoLekcePozadi = document.querySelector(".okno-pozadi")
+const matrixButtony = document.querySelectorAll(".matrix-button")
 
 const tlacitkoPredchozi = document.querySelector(".button-prev")
 const tlacitkoDalsi = document.querySelector(".button-next")
 let cisloZobrazeneLekce
+
+const vyberNahodneCislo = () => {
+  let cislo = Math.floor(Math.random()*24) + 1
+  return cislo
+}
+
+
+for (let i=0; i < matrixButtony.length; i++) {
+  let orderCislo = vyberNahodneCislo().toString()
+  matrixButtony[i].style.order = orderCislo
+}
 
 const zobrazOkno = (cisloDne) => {
     for (let i=0; i < obsahLekceElement.length; i++) {
@@ -37,11 +49,6 @@ const zobrazPredchoziLekci = (soucasnaLekce) => {
 const zavriOkno = () => {
     oknoLekce.style.display = "none";
     oknoLekcePozadi.style.display = "none";
-}
-
-const vyberNahodneCislo = () => {
-    let cislo = Math.floor(Math.random()*24) + 1
-    return cislo
 }
 
 function valiDate(day){
