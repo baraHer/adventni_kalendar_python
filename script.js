@@ -10,11 +10,11 @@ const zobrazOkno = (cisloDne) => {
     for (let i=0; i < obsahLekceElement.length; i++) {
         obsahLekceElement[i].style.display = "none";
     }
-    let indexDne = cisloDne - 1;
+    let indexDne = cisloDne;
     obsahLekceElement[indexDne].style.display = "block";
     tlacitkoPredchozi.style.display = "block"
     tlacitkoDalsi.style.display = "block"
-    if (cisloDne === 1) {
+    if (cisloDne === 0) {
         tlacitkoPredchozi.style.display = "none"
     }
     else if (cisloDne === 24) {
