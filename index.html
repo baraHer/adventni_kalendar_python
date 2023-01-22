@@ -589,8 +589,43 @@
                 C:\Users\ja\mega_slozka\programky> python3 muj_magicky_kod.py<br>
               </p>
           </div>
-          <div class="lekce-obsah" id="d11"></div>
-          <div class="lekce-obsah" id="d12"></div>
+          <div class="lekce-obsah" id="d11">
+            <h2>11. Komentáře</h2>
+            <p>
+              Do svého kódu doporučujeme psát komentáře.<br>
+              Na začátku piš do komentářů klidně i jak co funguje, ať až se ke svému kódu vrátíš, budeš vědět, co jsi napsal/a.
+            </p>
+            <p>Komenáře se píší:</p>
+            <p>#poznámka</p>
+            <p>Celý řádek za znaménkem # program odignoruje.</p>
+            <p>Příklad:</p>
+            <p>
+              if input('Dnes ti to sluší. ') != 'Díky':&nbsp;&nbsp;<br>
+              #pozná, co jsi za člověka<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;print("Kdo tě vychoval?")<br>
+              else:<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;print(":)")
+            </p>
+          </div>
+          <div class="lekce-obsah" id="d12">
+            <h2>12. Logické operátory</h2>
+            <p>
+              Už jsme si řekli, jak funguje if. Občas ale potřebujeme zvážit více než jednu podmínku.<br>
+              Můžeme použít operátory and, or, not:
+            </p>
+            <p>print("Na následující otázky odpovídej čísly od 0 do 9, 0 = neméně souhlasíš, 9 = nejvíce souhlasíš")</p>
+            <p>
+              hunger = input("mám hlad")<br>
+              food = input("mám doma nedostatek jídla")<br>
+              sad = input("mám blbou náladu, nemluvte na mě")<br>
+              winner = input("nedávno jsem vyhrál/a nějakou hru")<br>
+              &nbsp;<br>
+              if (hunger &#62; 4 and food &#60; 9) or not sad &#60; 3 or winner &#60; 5:<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;print("Potřebuješ obejmout!!!")<br>
+              else:<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;print("Stejně by ti obejmutí neuškodilo ;)")
+            </p>
+          </div>
           <div class="lekce-obsah" id="d13"></div>
           <div class="lekce-obsah" id="d14"></div>
           <div class="lekce-obsah" id="d15"></div>
