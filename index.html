@@ -626,18 +626,83 @@
               &nbsp;&nbsp;&nbsp;&nbsp;print("Stejně by ti obejmutí neuškodilo ;)")
             </p>
           </div>
-          <div class="lekce-obsah" id="d13"></div>
-          <div class="lekce-obsah" id="d14"></div>
-          <div class="lekce-obsah" id="d15"></div>
-          <div class="lekce-obsah" id="d16"></div>
-          <div class="lekce-obsah" id="d17"></div>
-          <div class="lekce-obsah" id="d18"></div>
-          <div class="lekce-obsah" id="d19"></div>
-          <div class="lekce-obsah" id="d20"></div>
-          <div class="lekce-obsah" id="d21"></div>
-          <div class="lekce-obsah" id="d22"></div>
-          <div class="lekce-obsah" id="d23"></div>
-          <div class="lekce-obsah" id="d24"></div>
+          <div class="lekce-obsah" id="d13">
+            <h2>13. Random</h2>
+            <p>
+              Python má spoustu rozšíření ve formě knihoven. O různých z nich si můžeš přečíst na internetu.<br>
+              My si ukážeme knihovnu random a jednu její konkrétní funkci.<br>
+              Na začátek kódu napiš:
+            </p>
+            <p>from random import randint</p>
+            <p>
+              To ti umožní používat funkci randint z knihovny random, která po zavolání vrací náhodné číslo v rozpětí, které jí zadáš.<br>
+              Dále v kódu ji pak zavoláš takto:
+            </p>
+            <p>
+              randint(0, 10)<br>
+              #vrátí náhodné číslo od 0 do 10
+            </p>
+            <p>Celý tvůj program pak může vypadat třeba takhle:</p>
+            <p>from random import randint</p>
+            <p>
+              if input("hádej číslo od 1 do 3: ") == randint(1, 5):<br>
+              #pokud si hrajeme na sazku, tak se tu nic podezřelého neděje :D<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;print("vyhrál si")<br>
+              else:<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;print("smůla, naval prachy")<br>
+            </p>
+          </div>
+          <div class="lekce-obsah" id="d14">
+            <h2>14. While cyklus</h2>
+            <p>
+              Dostáváme se k cyklům.<br>
+              Ty se hodí, když chceš něco dělat opakovaně a nechceš program spouštět znovu a znovu.<br>
+              Cyklus while funguje velmi podobně jako if, s tím rozdílem, že se opakuje stále dokola, dokud podmínka platí. Pokud do podmínky napíšeme např. True nebo 1, tak cyklus poběží do nekonečna.<br>
+              Můžeme si to vyzkoušet na tomto programu:
+            </p>
+            <p>
+              while input("Co mi povíš? "):<br>
+              #tohle je tvůj nejlepší kamarád, bude se smát jakémukoliv tvému vtipu, dokud se s ním budeš chtít bavit<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;print("XD\n")<br>
+              else:&nbsp;&nbsp;&nbsp;&nbsp;#i tady můžeš použít else, ale nemusíš<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;print(":(")
+            </p>
+          </div>
+          <div class="lekce-obsah" id="d15">
+            <h2>15. Příkazy break, continue</h2>
+          </div>
+          <div class="lekce-obsah" id="d16">
+            <h2>16. Seznamy</h2>
+          </div>
+          <div class="lekce-obsah" id="d17">
+            <h2>17. For cyklus</h2>
+          </div>
+          <div class="lekce-obsah" id="d18">
+            <h2>18. Lokální proměnné</h2>
+          </div>
+          <div class="lekce-obsah" id="d19">
+            <h2>19. For cyklus pro seznamy I.</h2>
+          </div>
+          <div class="lekce-obsah" id="d20">
+            <h2>20. For cyklus pro seznamy II.</h2>
+          </div>
+          <div class="lekce-obsah" id="d21">
+            <h2>21. Vlastní funkce</h2>
+          </div>
+          <div class="lekce-obsah" id="d22">
+            <h2>22. Funkce s parametrem</h2>
+          </div>
+          <div class="lekce-obsah" id="d23">
+            <h2>23. argv</h2>
+          </div>
+          <div class="lekce-obsah" id="d24">
+            <h2>24. Kam dál?</h2>
+            <p>
+              Děkujeme, že jsi s námi prošel/a celý náš adventní kalendář.<br>
+              Pokud tě python zaujal, můžeš pokračovat tady:
+            </p>
+            <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">www.python.cz/mrkmrk</a></p>
+          </div>
       </div>
       <div class="ovladaci-tlacitka">
         <button class="button-prev" onclick="zobrazPredchoziLekci(cisloZobrazeneLekce)">&#60;--</button>
