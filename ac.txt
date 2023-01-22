@@ -321,11 +321,111 @@ for i in to_do:
 
 print('Tohle všechno ti zbývá dodělat: ', *to_do)
 
+20 - index
+Věci jsou očíslované od 0. Takovému číslu se říká index.
+Pokud chceme zavolat položku ze seznamu a víme na jaké pozici se nachází (= známe její index), stačí napsat toto:
+seznam[index] 
+a vrátí se nám věc s tímto indexem
+obj_sou = ['b', 'f', 'l', 'm', 'p', 's', 'v', 'z']
+obj_sou[5]
+vrátí 's'
 
-20 - for index
+
 21 - funkce
+S některými funkcemi už ses setkal/a v minulých lekcích.
+např. print(), input(), randint() atd.
+funkce něco berou (viz zítřejší lekce), ale nemusí, a něco vrací, ale taky nemusí
+jak takovou funkci vyrobit, hmm, dej mi chvilku, ...
+možná můžeme zkusit tohle
+
+from random import randint
+
+
+body = [0, 0, 0]    #[win, draw, lose]
+
+def play():
+    guess = input('kámen, nůžky, papír: ')
+    num = randint(0, 2)    #0 = nuzky, 1 = kamen, 2 = papir
+    
+    if guess == "kámen" or guess == "kamen" or guess == "šutr":
+        if num == 0:
+            body[0] += 1
+            print('win')
+        if num == 1:
+            body[1] += 1
+            print('draw')
+        if num == 2:
+            body[2] += 1
+            print('lose')
+    elif guess == "nůžky" or guess == "nuzky":
+        if num == 2:
+            body[0] += 1
+            print('win')
+        if num == 0:
+            body[1] += 1
+            print('draw')
+        if num == 1:
+            body[2] += 1
+            print('lose')
+    elif guess == "papír" or guess == "papir" or guess == "toaleťák":
+        if num == 1:
+            body[0] += 1
+            print('win')
+        if num == 2:
+            body[1] += 1
+            print('draw')
+        if num == 0:
+            body[2] += 1
+            print('lose')
+    
+    print(f"vyhrál/a jsi {body[0]}x z {body[0] + body[1] + body[2]} her")
+    return body
+
+while True:
+    play()
+    print("pokud už nechceš hrát zmáčkni ctrl + c")
+
+#body = globální proměnná, guess a num jsou lokální proměnné
+takže pro shrnutí, funkci definuješ:
+
+def nazev_funkce():
+    kód s využitím toho, co znáš
+    nezapomeň každý řádek, který do funkce patří odsadit
+    i tady se tvoří lokální proměnné, jednou co program skončí se vymažou
+
+
 22 - funkce s argumentem
+Argument je to, co dáváš funkci, aby s tím pracovala:
+např. input() může vzít jeden argument (string), na který se zeptá dřív než bude považovat odpověď
+randint() vezme dva argumenty (itegery = celá čísla), aby věděl v jakém rozmezí má být náhodné číslo
+vyzkoušit si vytvořit proměnnou s argumentem můžeš taky:
+
+def scitani(a, b):
+	return a + b
+
+scitani(input(), input())
+
+#tahle funkce už existuje a to ve stylovějším provedení: sum()
+
+
 23 - argv
+Pokud by si chtěl/a pythonem zpracovávat nějaký třeba textový soubor,
+lze to udělat několika způsoby.
+Tady je jeden z nich.
+Aby fungval, musíš mít soubot který chceš zpracovat ve stejné složce jako svůj .py soubor
+A naše zaklínadlo bude vypadat nějak takhle:
+
+from sys import argv
+program_name, file_name = argv
+
+
+file = open(file_name, 'r')
+for i in file:
+    print('délka řádku:', len(i))
+
+#len() vrátí číslo - délku stringu nebo seznamu
+
+
 24 - co dál?
 Děkujeme, že jsi s námi prošel/a celý náš adventní kalendář,
 pokud tě python zaujal, můžeš pokračovat tady:
