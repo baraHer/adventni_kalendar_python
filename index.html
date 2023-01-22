@@ -487,15 +487,58 @@
             <h2>6. Funkce print()</h2>
             <p>Funkci print() můžeš použít pro vypsání více proměnných v jednom řádku:</p>
             <p>
-              &#62;&#62;&#62 print(bertik, "je mé oblíbené zvíře, máme jich doma", x)<br>
+              &#62;&#62;&#62; print(bertik, "je mé oblíbené zvíře, máme jich doma", x)<br>
               # proměnné bertik a x musíš mít předem definované.
             </p>
-            <p>&#62;&#62;&#62 print("Doma na mě čeká " + bertik + "a můj" + micka + "Micka")</p>
+            <p>&#62;&#62;&#62; print("Doma na mě čeká " + bertik + "a můj" + micka + "Micka")</p>
             <p>Pokud chceš vypsat kombinaci textu a proměnných, je dobré použít tzv. f-string:</p>
-            <p>&#62;&#62;&#62 print(f"Můj nejoblíbenější {micka} je {bertik}, mám jich doma {x - 1}.")</p>
+            <p>&#62;&#62;&#62; print(f"Můj nejoblíbenější {micka} je {bertik}, mám jich doma {x - 1}.")</p>
           </div>
-          <div class="lekce-obsah" id="d7"></div>
-          <div class="lekce-obsah" id="d8"></div>
+          <div class="lekce-obsah" id="d7">
+            <h2>7. Funkce input()</h2>
+            <p>
+              Vstup ("input") jsou data, která počítač dostává od uživatele.<br>
+              Je to stejné, jako když se zeptáš kamaráda na otázku a on ti odpoví; jeho odpověď je pro tebe vstup.
+            </p>
+            <p>Vyzkoušet si to můžeš takhle:</p>
+            <p>
+              &#62;&#62;&#62; answer = input("Jak se máš? ")<br>
+              &#62;&#62;&#62; print('Máš se: ' + answer)
+            </p>
+            <p>
+              &#62;&#62;&#62; age = input('Kolik ti je? ')<br>
+              &#62;&#62;&#62; print(f"Narodil/a si se v roce {2023 - int(age)} nebo o rok dříve.")
+            </p>
+            <p># funkce int() mění string obcahující pouze číslice v číslo.</p>
+          </div>
+          <div class="lekce-obsah" id="d8">
+            <h2>8. Podmínky - if</h2>
+            <p>
+              If vezme podmínku a ověří, jestli je pravdivá. Pokud pravdivá je, nechá provést část programu.<br>
+              Např. Jestli prší, vezmu si deštník.
+            </p>
+            <p>
+              if prší:<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;vezmu si deštník
+            </p>
+            <p>Na čem si to vyzkoušet?</p>
+            <p>
+              &#62;&#62;&#62; age = int(input("Kolik ti je? "))<br>
+              &#62;&#62;&#62; if age &#60; 17:<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;print("Mazej domů, vždyť už máš dávno po večerce!")<br>
+              elif age == 17:<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;print('No dobře, ale ať tě nikdo nevidí.')<br>
+              elif age == 18:<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;print('Běž, ale žádný blbosti!')<br>
+              else age >= 18:<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;print("Běž se bavit.")
+            </p>
+            <p>
+              Jestli si pamatuješ, jak si 4. den zkoušel znaky &#60;, ==, &#62;= atd., ty ti vracely hodnotu True nebo False.<br>
+              If tuhle informaci (True, False) vezme, a pokud je pravdivá, provede co má zadáno. Pokud není pravdivá, posune se dál na další elif, nebo else.<br>
+            </p>
+            <p>Akce, které se mají provést, když je podmínka splněna, odsazujeme tabulátorem.</p>
+          </div>
           <div class="lekce-obsah" id="d9"></div>
           <div class="lekce-obsah" id="d10"></div>
           <div class="lekce-obsah" id="d11"></div>
