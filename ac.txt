@@ -295,7 +295,33 @@ stejný seznam můžu vytvořit takhle:
 hokus_pokus = [i for i in range(20)]
 
 18 - lokální proměnné
+Lokální proměnná je taková proměnná, která po nějaké době sama zmizí.
+Je to např. i ve for cyklu. Je definováno pro každé jedno zopakování cyklu, ale když cyklus skončí, tak je znovu nedefinována.
+To by ale neplatilo pokud bychom i definovali už předem:
+
+for i in range(5):
+    print(i)
+
+print(i)
+vyskočí error, i is not defined
+
+pokud ale i definujeme předem, už z něj nebude lokální proměnná, ale globální proměnná a error nám nevyskočí
+
+
 19 - for list
+for cyklus nemusíme použít jen na procházení po sobě jdoucích čísel,
+ale třeba na procházení jednotlivých položek v seznamu
+
+to_do = ['ukol z matiky', 'koupit listek na ples', 'napsat si omluvenku', 'koupit darek fantovi']
+
+for i in to_do:
+	print(i)
+    if input('pokud to mas hotove napis ano, jinak napis ne') == 'ano':
+        to_do.remove(i)
+
+print('Tohle všechno ti zbývá dodělat: ', *to_do)
+
+
 20 - for index
 21 - funkce
 22 - funkce s argumentem
