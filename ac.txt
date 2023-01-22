@@ -249,14 +249,51 @@ else:                           #i tady můžeš použít else, ale nemusíš
 
 
 15 - break a continue
+break ukončí cyklus a continue se vrátí na jeho začátek.
+Ukázat si to můžeme na včerejším programu a našem nejlepším kamarádovi
 
-while input("Co mi povíš? "):   #tohle je tvůj nejlepší kamarád, bude se smát jakémukoliv tvému vtipu, dokud se s ním budeš chtít bavit      
+counter = 30
+joke = ""
+while joke != "nenávidím tě":
+    if not joke:
+        print(":|")
+        continue
     print("XD\n")
-else:                           #i tady můžeš použít else, ale nemusíš
+    if counter < 0:
+        print("Už smíchy nemůžu dýchat... x_x")
+        break
+    counter -= 1                #je to stejné jako by si napsal/a counter = counter - 1
+else:
     print(":(")
 
+
 16 - seznam
-17 - for range
+Z datových typů už známe integer, float, string a boolean (True/False).
+Další užitečný je seznam (= list)
+vytvoříš ho:
+nazev_seznamu = []      #tohle je prázdný seznam
+zviratka = ['opicka', 'orangutan', 'papousek', 'clovek']
+
+pokud chci přidat něco nakonec seznamu, použiju metodu .append()
+zviratka.append('oslik')
+
+Seznam může obsahovat jakýkoliv datoví typ, případně i další seznam.
+pokud seznam jednou definuješ a vložíš do něj nějakou proměnnou,
+tak pokud poté proměnnou změníš, v seznamu zůstane její starý obsah.
+
+
+17 - for i in range(n):
+for je také cyklus, podobně jako while, ale na omezený počet opakování.
+např.
+
+seznamek = []
+for i in range(20):     #i je proměnná, která se při každém opakování cyklu mění na čísla od 0 do 19
+    seznamek.append(i)
+print(*seznamek)        #* nemusí být použitá, jen je poté výsledek čitelnější
+
+stejný seznam můžu vytvořit takhle:
+hokus_pokus = [i for i in range(20)]
+
 18 - lokální proměnné
 19 - for list
 20 - for index
