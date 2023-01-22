@@ -1,0 +1,269 @@
+0 - odkaz na stažení pythonu
+Pokud nemáš stažený python, celý návod najdeš na:
+#odkaz
+
+Kdykoliv si nebudeš vědět rady, neboj se googlit.
+To nejdůležitější, co bys se měl/a během tohoto kalendáře naučit,
+je řešit problémy, zkoušet, co tě napadne, přicházet na to, proč něco nefunguje, a vyhledávat informace.
+S těmito skilly se poté můžeš v programování zlepšovat sám/sama bez průvodce.
+
+
+1 - jak to zapnout?
+Otevři příkazovou řádku (vyhledat ji můžeš jako cmd).
+Napiš python (případně python3) do příkazové řádky a zmáčkni enter. 
+Pokud se ti zobrazí uvítání do Pythonu a nový řádek se třemi šipkami,:
+>>>
+tak jsi právě spustil/a Python
+
+A můžeš spustit svůj první program.
+do příkazové řádky napiš:
+>>> print("Hello, world!")
+a poté zmáčkni enter (tím začne python kód zpracovávat)
+
+pro odejití z pythonu napiš:
+>>> quit()
+
+
+2 - proměnné
+definuj si nějaké proměnné:
+nazev_promenne = celé číslo (= integer)
+nazev_promenne2 = desetinné číslo (= float) #desetinná čísla se píší s tečkou: 12.024
+např.
+x = 5
+když napíšeš název proměnné do příkazové řádky, vrátí ti její hodnotu:
+>>> x
+5           #výstup (output), který ti vrátí python
+
+
+3 - matika
+poté zkus experimentovat se znaky:
++, -, *, **, /, //, %
+a to tím způsobem, že napíšeš:
+číslo/název proměnné znak číslo/název proměnné enter
+např.
+>>> 21 + x
+
+dál je můžeš kombinovat a přidat závorky, např.:
+>>> (5 + x * 2) % 2
+
+#poznámka: matika v pythonu není vždy 100% správně
+
+
+4 - pravdivost
+Chci abys experimetoval/a s těmito znaky:
+==, !=, <, >, <=, >=
+
+a to způsobem, že napíšeš:
+číslo znak číslo enter
+(místo čísel můžeš znovu používat proměnné)
+např.
+>>> 7 != 9
+
+#mezery psát nemusíš, ale doporučuji je psát pro přehlednost
+#tyhle znaky vrací pravdivost výroku, True/False (datový typ boolean)
+
+dál je můžeš kombinovat s tím, co už znáš:
+>>> x % 2 == 0
+nebo
+>>> 2 > (5 + (3 + y / 3))
+
+#poznámka: matika v pythonu není vždy 100% správně
+#protože python počítá ve dvojková soustavě na omezený počet míst
+
+
+5 - text
+za proměnnou můžeme dosadit i text (string)
+string je datový typ, který se píše do uvozovek "nějaký text" nebo 'jiný text'
+proměnnou můžeme definovat takhle:
+nazev_promenne = string
+např.
+>>> bertik = 'pes'
+>>> micka = "domácí mazlíček"
+
+vypsat obsah proměnné můžeš dvěma zpuůsoby
+buď napíšeš do terminálu její jméno:
+>>> bertik
+nebo použiješ funkci print():
+>>> print(bertik)
+
+
+6 - print()
+funkci print() můžeš použít i pro vypsání výce proměnných v jednom řádku:
+>>> print(bertik, "je mé oblíbené zvíře, máme jich doma", x)
+#proměnné bertik a x musíš mít předem definované
+#to platí i pro proměnné u dalších příkladů použití print()
+nebo
+>>> print("Doma na mě čeká " + bertik + "a můj" + micka + "Micka")
+nebo
+>>> print(f"Můj nejoblíbenější {micka} je {bertik}, mám jich doma {x - 1}.")
+
+
+7 - input()
+vstup (= input) jsou data, která program bere od uživatele
+Je to stejné, jako když se zeptáš kamaráda na otázku a on ti odpoví,
+jeho odpověď je pro tebe vstup.
+
+vyzkoušet si to můžeš např. takhle:
+>>> answer = input("Jak se máš? ")
+>>> print('Máš se: ' + answer)
+>>> age = input('Kolik ti je? ')
+>>> print(f"Narodil/a si se v roce {2023 - int(age)} nebo o rok dříve.")
+#funkce int() mění string obcahující pouze číslice v číslo
+
+
+8 - if ____:
+If vezme podmínku a ověří, jestli je pravdivá. okud pravdivá je,
+nechá provést část programu. Např. Jestli prší, vezmu si deštník.
+if prší:
+    vezmu si deštník
+
+Na čem si to vyzkoušet?
+>>> age = int(input("Kolik ti je? "))
+>>> if age < 17:
+...     print("Mazej domů, vždyť už máš dávno po večerce!")
+... elif age == 17:
+...     print('No dobře, ale ať tě nikdo nevidí.')
+... elif age == 18:
+...     print('Běž, ale žádný blbosti!')
+... else age >= 18:
+...     print("Běž se bavit.")
+...
+#jestli si pamatuješ, jak si 4. den zkoušel znaky <, ==, >= atd. tak ty ti vraceli buď True nebo False
+#if tuhle informaci (True, False) vezme, a pokud je pravdivá, provede co má zadáno a skončí
+#pokud není pravdivá, posune se dál na další elif, nebo else
+#elif je zkratka pro: else if
+#ty čtyři mezery před každým s print nejou čtyři mezery, ale tab
+
+
+9 - help()
+Pokud máš spuštěný python, můžeš použít funkci help() k vyhledávání informací.
+>>> help()
+otevře se ti nějaké uvítání a návod na prozkoumávání python dokumentací
+
+teď si můžeš vyhledat nějaký výraz co znáš:
+>help if
+a otevře se ti dokumentace s jeho názvem
+
+Pokud žádnou dokumentaci nenajde můžeš se podívat na jeden z výrazů,
+které ti nabízí, např.:
+>help keywords
+a zobrazí se ti jeden ze seznamů výrazů, které mají svoji dokumentaci
+Z těch si můžeš nějaké známé vybrat a vyhledat
+>help and
+rozhodně nedoporučuji číst vše a celé
+
+
+10 - soubor.py
+V předminulé úloze se ti možná často stávalo, že si něco špatně napsal/a a musel/a jsi začít od začátku.
+Zároveň pokud chceš mít svůj kód uložený, hodí se vytvořit si soubor s koncovkou .py .
+Ten můžeš upravovat přes různé editory (běžný Textový editor, Visual Studio Code, Atom nebo třeba Vim)
+Pokud do takového souboru napíšeš nějaký program, můžeš ho poté spustit v příkazové řádce.
+
+vytvoř si někde dokument
+
+napiš do něco jako:
+print("Zdravím Tě, nejvyšší mezi bohy.\nJe mi ctí Ti sloužit.")
+#\n je znak pro enter/nový řádek, stejně tak \t pro tab a \" ti umožní napsat uvozovku
+#\\ potom obrácené lomítko
+
+příkazovou řádkou se dostaň do složky a to pomocí cd (change directory):
+otevřeš příkazovou řádku
+podíváš se, ve které jsi složce (což uvidíš vlevo) např. na Windows:
+C:\Users\uzivatel\nazev_slozky\nazev_slozky_ktera_je_v_te_prvni_slozce>
+atd. název složky, ve které se právě nacházíš je úplně vpravo
+
+pohybovat se mezi složkami můžeš takhle:
+C:\Users\ja\mega_slozka\podradna_slozka> cd podradnejsi
+C:\Users\ja\mega_slozka\podradna_slozka\podradnejsi> cd .. 
+C:\Users\ja\mega_slozka\podradna_slozka>
+dir vypíše všechny složky a soubory, které jsou ve složce, kde se právě nacházíš
+
+pokud se takhle dostaneš až do složky, kde je tvůj .py soubor, takhle ho můžeš spustit
+C:\Users\ja\mega_slozka\programky> python muj_magicky_kod.py
+respektive
+C:\Users\ja\mega_slozka\programky> python3 muj_magicky_kod.py
+
+
+11 - komentář
+Ve svém kódu doporučuji psát komentáře. Na začátku piš do komentářů klidně i jak co funguje,
+aby až se ke svému kódu vrátíš, si věděl/a, co jsi napsal/a.
+komenáře se píší:
+#poznámka
+celý řádek za znaménkem # program odignoruje
+
+příklad:
+if input('Dnes ti to sluší. ') != 'Díky':   #pozná, co jsi za člověka
+    print("Kdo tě vychoval?")
+else:
+    print(":)")
+
+
+12 - not, and a or v podmínce
+Už jsme si řekli jak funguje if.
+Občas ale potřebujeme zvážit víc než jednu podmínku.
+Proto můžeme použít and a or:
+
+print("Na následující otázky odpovídej čísly od 0 do 9, 0 = neméně souhlasíš, 9 = nejvíce souhlasíš")
+hunger = input("mám hlad")
+food = input("mám doma nedostatek jídla")
+sad = input("mám blbou náladu, nemluvte na mě")
+winner = input("nedávno jsem vyhrál/a nějakou hru")
+
+if (hunger > 4 and food < 9) or not sad < 3 or winner < 5:
+    print("Potřebuješ obejmout!!!")
+else:
+    print("Stejně by ti obejmutí neuškodilo ;)")
+
+
+13 - random
+Python má spoustu rozšíření ve formě knihoven. O různých z nich si můžeš přečíst na internetu.
+My si ukážeme knihovnu random a to konkrétně jen jednu funkci z ní.
+Na začátek kódu napiš:
+from random import randint
+
+To ti umožní používat funkci randint, která po zavolání vrací náhodné číslo v tebou daném rozpětí.
+dál v kódu jí můžeš použít zavoláním:
+randint(0, 10)
+ta ti vrátí náhodné číslo od 0 do 10
+
+Tvůj celý program pak může vypadat třeba takhle:
+from random import randint
+
+
+if input("hádej číslo od 1 do 3: ") == randint(1, 5):   #pokud si hrajeme na sazku, tak se tu nic podezřelého neděje :D
+    print("vyhrál si")
+else:
+    print("smůla, naval prachy")
+
+
+14 - while ____:
+Dostáváme se k cyklům.
+Ty se hodí, když chceš něco dělat opakovaně a nechceš program spouštět znovu a znovu.
+Cyklus while funguje velmi podobně jako if, s tím rozdílem, že se opakuje stále dokola, dokud podmínka platí.
+Pokud do podmínky napíšeme např. True nebo 1, tak cyklus poběží do nekonečna.
+můžeme si to vyzkoušet na tomto programu:
+while input("Co mi povíš? "):   #tohle je tvůj nejlepší kamarád, bude se smát jakémukoliv tvému vtipu, dokud se s ním budeš chtít bavit      
+    print("XD\n")
+else:                           #i tady můžeš použít else, ale nemusíš
+    print(":(")
+
+
+15 - break a continue
+
+while input("Co mi povíš? "):   #tohle je tvůj nejlepší kamarád, bude se smát jakémukoliv tvému vtipu, dokud se s ním budeš chtít bavit      
+    print("XD\n")
+else:                           #i tady můžeš použít else, ale nemusíš
+    print(":(")
+
+16 - seznam
+17 - for range
+18 - lokální proměnné
+19 - for list
+20 - for index
+21 - funkce
+22 - funkce s argumentem
+23 - argv
+24 - co dál?
+Děkujeme, že jsi s námi prošel/a celý náš adventní kalendář,
+pokud tě python zaujal, můžeš pokračovat tady:
+#odkaz rickroll, neco jako www.python.cz/mrkmrk
