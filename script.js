@@ -13,10 +13,30 @@ const vyberNahodneCislo = () => {
   return cislo
 }
 
+const matrixJedNahoru = (element, translateNumber) => {
+  element.style.transform = "translate(0rem, -"+translateNumber+"rem)"
+  function matrixNahoru() {
+    matrixJedNahoru(element)
+  }
+  timeout = setTimeout(matrixNahoru, translateNumber*100)
+}
+
+const matrixJedDolu = (element) => {
+  let translateNumber = vyberNahodneCislo()/3
+  let transformTime = 0.4+Math.random()
+  element.style.transition = "transform "+ transformTime +"s ease-in-out"
+  element.style.transform = "translate(0rem, "+translateNumber+"rem)"
+  function matrixDolu() {
+    matrixJedDolu(element)
+  }
+  timeout = setTimeout(matrixDolu, translateNumber*100)
+}
 
 for (let i=0; i < matrixButtony.length; i++) {
   let orderCislo = vyberNahodneCislo().toString()
   matrixButtony[i].style.order = orderCislo
+  let element = matrixButtony[i]
+  matrixJedDolu(element)
 }
 
 const zobrazOkno = (cisloDne) => {
