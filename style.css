@@ -40,7 +40,7 @@ button {
   z-index: 2;
   width: 600px;
   position: fixed;
-  left: calc((100% - 648px)/2);
+  left: calc((100% - 602px)/2);
   top: 20%;
   display: none;
   border: 1.5px solid chartreuse;
