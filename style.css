@@ -38,10 +38,10 @@ button {
 
 .okno-border {
   z-index: 2;
-  width: 600px;
+  width: 700px;
   position: fixed;
-  left: calc((100% - 602px)/2);
-  top: 20%;
+  left: calc((100% - 748px)/2);
+  top: 8%;
   display: none;
   border: 1.5px solid chartreuse;
   background-color: rgb(0, 0, 0);
