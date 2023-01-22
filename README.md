@@ -2,7 +2,6 @@
     Úkoly:
     napsat obsah 0 - 24
     matrix sloupce
-        nahodne rozdeleni
         animace
     rozlozeni stranky
     vybrat font a barvy
