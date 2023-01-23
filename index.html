@@ -679,9 +679,33 @@
           </div>
           <div class="lekce-obsah" id="d18">
             <h2>18. Lokální proměnné</h2>
+            <p>
+            Lokální proměnná je taková proměnná, která definovaná na omezenou dobu.<br>
+            Když splní svůj účel, zmizí.<br>
+            Takové proměnné najdeme třeba v cyklech a to konkrétně i ve for cyklu.<br>
+            To je definováno pro každé jedno zopakování cyklu, ale když cyklus skončí, tak je znovu nedefinována.<br>
+            To by ale neplatilo pokud bychom i definovali už předem:<br>
+            for i in range(5):<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print(i)<br>
+            <br>
+            print(i)<br>
+            #vyskočí error, i is not defined<br>
+            #pokud ale i definujeme před for cyklem (např. i = None (None znamená, že proměnná bude existovat, ale bude prázdná)),<br>
+            #už z něj nebude lokální proměnná, ale globální proměnná a error nám nevyskočí
+            </p>
           </div>
           <div class="lekce-obsah" id="d19">
             <h2>19. For cyklus pro seznamy</h2>
+            <p>
+            For cyklus nemusíme použít jen na procházení po sobě jdoucích čísel,<br>
+            ale třeba i na procházení jednotlivých položek v seznamu.<br>
+            to_do = ['ukol z matiky', 'koupit listek na ples', 'napsat si omluvenku', 'koupit darek fantovi']<br><br>
+            for i in to_do:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print(i)
+            &nbsp;&nbsp;&nbsp;&nbsp;if input('pokud to mas hotove napis ano, jinak napis ne') == 'ano':<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to_do.remove(i)<br><br>
+            print('Tohle všechno ti zbývá dodělat: ', *to_do)
+            </p>
           </div>
           <div class="lekce-obsah" id="d20">
             <h2>20. Index</h2>
