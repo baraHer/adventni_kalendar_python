@@ -731,43 +731,43 @@
           <div class="lekce-obsah" id="d18">
             <h2>18. Lokální proměnné</h2>
             <p>
-            Lokální proměnná je taková proměnná, která definovaná na omezenou dobu.<br>
-            Když splní svůj účel, zmizí.<br>
-            Takové proměnné najdeme třeba v cyklech a to konkrétně i ve for cyklu.<br>
-            To je definováno pro každé jedno zopakování cyklu, ale když cyklus skončí, tak je znovu nedefinována.<br>
-            To by ale neplatilo pokud bychom i definovali už předem:<br>
-            for i in range(5):<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;print(i)<br>
-            <br>
-            print(i)<br>
-            #vyskočí error, i is not defined<br>
-            #pokud ale i definujeme před for cyklem (např. i = None (None znamená, že proměnná bude existovat, ale bude prázdná)),<br>
-            #už z něj nebude lokální proměnná, ale globální proměnná a error nám nevyskočí
+                Lokální proměnná je taková proměnná, která definovaná na omezenou dobu. Když splní svůj účel, zmizí.<br>
+                Takové proměnné najdeme třeba v cyklech a to konkrétně i ve for cyklu. Jsou definované pro každé jedno zopakování cyklu, ale když cyklus skončí, tak jsou znovu nedefinované.<br>
+                To ale neplatí, pokud proměnnou definujeme už před začátkem cyklu:
+            </p>
+            <p>
+                for i in range(5):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print(i)
+            </p>
+            <p>print(i)</p>
+            <p>
+                # vyskočí error, i is not defined<br>
+                # pokud ale proměnnou i definujeme před for cyklem (např. i = None - None znamená, že proměnná bude existovat, ale bude prázdná), už z něj nebude lokální proměnná, ale globální proměnná a error nám nevyskočí.
             </p>
           </div>
           <div class="lekce-obsah" id="d19">
             <h2>19. For cyklus pro seznamy</h2>
+            <p>For cyklus nemusíme použít jen na procházení po sobě jdoucích čísel, ale třeba i na procházení jednotlivých položek v seznamu.</p>
+            <p>to_do = ['ukol z matiky', 'koupit listek na ples', 'napsat si omluvenku', 'koupit darek fantovi']</p>
             <p>
-            For cyklus nemusíme použít jen na procházení po sobě jdoucích čísel,<br>
-            ale třeba i na procházení jednotlivých položek v seznamu.<br>
-            to_do = ['ukol z matiky', 'koupit listek na ples', 'napsat si omluvenku', 'koupit darek fantovi']<br><br>
-            for i in to_do:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;print(i)
-            &nbsp;&nbsp;&nbsp;&nbsp;if input('pokud to mas hotove napis ano, jinak napis ne') == 'ano':<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to_do.remove(i)<br><br>
-            print('Tohle všechno ti zbývá dodělat: ', *to_do)
+                for i in to_do:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print(i)
+                &nbsp;&nbsp;&nbsp;&nbsp;if input('pokud to mas hotove napis ano, jinak napis ne') == 'ano':<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to_do.remove(i)<br><br>
+                print('Tohle všechno ti zbývá dodělat: ', *to_do)
             </p>
           </div>
           <div class="lekce-obsah" id="d20">
             <h2>20. Index</h2>
             <p>
-            Věci v seznamech jsou očíslované od 0. Takovému číslu se říká index.<br>
-            Pokud chceme zavolat položku ze seznamu a víme na jaké pozici se nachází (= známe její index), stačí napsat toto:<br>
-            seznam[index]<br><br>
-            A vrátí se nám věc s tímto indexem.<br>
-            obj_sou = ['b', 'f', 'l', 'm', 'p', 's', 'v', 'z']<br>
-            obj_sou[5]<br>
-            vrátí 's'
+                Věci v seznamech jsou očíslované od 0. Takovému číslu se říká index.<br>
+                Pokud chceme zavolat položku ze seznamu, a víme, na jaké pozici se nachází (známe její index), stačí napsat:
+            </p>
+            <p>nazev_seznamu[index]</p>
+            <p>a vrátí se nám položka s tímto indexem.</p>
+            <p>
+                obj_sou = ['b', 'f', 'l', 'm', 'p', 's', 'v', 'z']<br>
+                obj_sou[5]<br>&nbsp;&nbsp;&nbsp;&nbsp;# vrátí 's'
             </p>
           </div>
           <div class="lekce-obsah" id="d21">
