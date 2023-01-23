@@ -61,7 +61,12 @@ button {
 
 .ovladaci-tlacitka > button {
   font-size: 1.5rem;
-  padding: 0.5rem 1.4rem;
+  padding: 0.5rem 2rem;
+}
+
+.button-close {
+  position: absolute;
+  right: 0;
 }
 
 h2, p {
