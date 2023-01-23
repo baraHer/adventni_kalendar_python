@@ -685,15 +685,104 @@
           </div>
           <div class="lekce-obsah" id="d20">
             <h2>20. Index</h2>
+            <p>
+            Věci v seznamech jsou očíslované od 0. Takovému číslu se říká index.<br>
+            Pokud chceme zavolat položku ze seznamu a víme na jaké pozici se nachází (= známe její index), stačí napsat toto:<br>
+            seznam[index]<br><br>
+            A vrátí se nám věc s tímto indexem.<br>
+            obj_sou = ['b', 'f', 'l', 'm', 'p', 's', 'v', 'z']<br>
+            obj_sou[5]<br>
+            vrátí 's'
+            </p>
           </div>
           <div class="lekce-obsah" id="d21">
             <h2>21. Funkce</h2>
+            <p>
+            S některými funkcemi už ses setkal/a v minulých lekcích.<br>
+            např. print(), input(), randint() atd.<br>
+            Funkce něco berou (viz zítřejší lekce), pak něco zpracují, a něco vrátí, ale taky nemusí.<br>
+            Jak takovou funkci vyrobit?<br>
+            Hmm, dej mi chvilku, ...<br>
+            Možná můžeme zkusit tohle:<br>
+            from random import randint<br><br><br>
+            body = [0, 0, 0]    #[win, draw, lose]<br><br>
+            def play():<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;guess = input('kámen, nůžky, papír: ')<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;num = randint(0, 2)    #0 = nuzky, 1 = kamen, 2 = papir<br><br>
+            &nbsp;&nbsp;&nbsp;&nbsp;if guess == "kámen" or guess == "kamen" or guess == "šutr":<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 0:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[0] += 1<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('win')<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 1:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[1] += 1<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('draw')<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 2:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[2] += 1<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('lose')<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;elif guess == "nůžky" or guess == "nuzky":<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 2:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[0] += 1<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('win')<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 0:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[1] += 1<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('draw')<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 1:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[2] += 1<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('lose')<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;elif guess == "papír" or guess == "papir" or guess == "toaleťák":<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 1:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[0] += 1<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('win')<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 2:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[1] += 1<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('draw')<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 0:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[2] += 1<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('lose')<br>
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print(f"vyhrál/a jsi {body[0]}x z {body[0] + body[1] + body[2]} her")<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;return body<br>
+            <br>
+            while True:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;play()<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print("pokud už nechceš hrát zmáčkni ctrl + c")<br>
+            <br>
+            #body = globální proměnná, guess a num jsou lokální proměnné<br>
+            <br>
+            takže pro shrnutí, funkci definuješ:<br>
+            def nazev_funkce():<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;kód s využitím toho, co znáš
+            &nbsp;&nbsp;&nbsp;&nbsp;nezapomeň každý řádek, který do funkce patří odsadit
+            &nbsp;&nbsp;&nbsp;&nbsp;i tady se tvoří lokální proměnné, jednou co program skončí se vymažou
+            </p>
           </div>
           <div class="lekce-obsah" id="d22">
             <h2>22. Argument</h2>
+            <p>
+            Argument je to, co dáváš funkci, aby s tím pracovala:<br>
+            Např.<br>
+            input() může vzít jeden argument (string), na který se zeptá dřív, než bude požadovat odpověď.<br>
+            randint() vezme dva argumenty (itegery = celá čísla), aby věděl v jakém rozmezí má být náhodné číslo<br>
+            vyzkoušit si vytvořit proměnnou s argumentem můžeš taky:<br>
+            def scitani(a, b):<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;return a + b<br><br>
+            scitani(input(), input())<br>
+            #tahle funkce už existuje a to ve stylovějším provedení: sum()
+            </p>
           </div>
           <div class="lekce-obsah" id="d23">
             <h2>23. argv</h2>
+            <p>Pokud by si chtěl/a pythonem zpracovávat nějaký, třeba textový, soubor, <br>lze to udělat několika způsoby.<br>
+            Tady je jeden z nich. <br>
+            Aby fungval, musíš mít soubor, který chceš zpracovat, ve stejné složce jako svůj .py soubor.<br>
+            Naše zaklínadlo bude vypadat nějak takhle:<br>
+            from sys import argv<br>
+            program_name, file_name = argv<br><br><br>
+            file = open(file_name, 'r')<br>
+            for i in file:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;print('délka řádku:', len(i))<br><br>
+            #len() vrátí číslo - délku stringu nebo seznamu
+            </p>
           </div>
           <div class="lekce-obsah" id="d24">
             <h2>24. Kam dál?</h2>
