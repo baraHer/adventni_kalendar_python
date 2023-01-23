@@ -1,11 +1,10 @@
 # adventni_kalendar_python
     Úkoly:
-    rozlozeni stranky
-    vybrat font a barvy
+    barvy podle dnu
     vyskakovaci okna:
         grafika
         rozlozeni
-        animace
+        lekce 21. - aby nepretekala
     responzivita
     
     barvy
