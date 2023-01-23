@@ -8,6 +8,9 @@ const tlacitkoPredchozi = document.querySelector(".button-prev")
 const tlacitkoDalsi = document.querySelector(".button-next")
 let cisloZobrazeneLekce
 
+const datum = new Date();
+const den = datum.getDate()
+
 const vyberNahodneCislo = () => {
   let cislo = Math.floor(Math.random()*24) + 1
   return cislo
@@ -50,7 +53,7 @@ const zobrazOkno = (cisloDne) => {
     if (cisloDne === 0) {
         tlacitkoPredchozi.style.display = "none"
     }
-    else if (cisloDne === 24) {
+    else if (cisloDne === 24 || cisloDne === den) {
         tlacitkoDalsi.style.display = "none"
     }
 
@@ -73,9 +76,6 @@ const zavriOkno = () => {
     oknoLekcePozadi.style.display = "none";
     oknoBorder.style.display = "none";
 }
-
-const datum = new Date();
-const den = datum.getDate()
 
 for (let i=0; i < matrixButtony.length; i++) {
   if (i > den) {
