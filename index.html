@@ -833,30 +833,41 @@
           </div>
           <div class="lekce-obsah" id="d22">
             <h2>22. Argument</h2>
+            <p>Argument je parametr, který dáváš funkci, aby s tím mohla pracovat.</p>
+            <p>Příklady:</p>
             <p>
-            Argument je to, co dáváš funkci, aby s tím pracovala:<br>
-            Např.<br>
-            input() může vzít jeden argument (string), na který se zeptá dřív, než bude požadovat odpověď.<br>
-            randint() vezme dva argumenty (itegery = celá čísla), aby věděl v jakém rozmezí má být náhodné číslo<br>
-            vyzkoušit si vytvořit proměnnou s argumentem můžeš taky:<br>
-            def scitani(a, b):<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;return a + b<br><br>
-            scitani(input(), input())<br>
-            #tahle funkce už existuje a to ve stylovějším provedení: sum()
+                input() může vzít jeden argument (string), na který se zeptá dřív, než bude požadovat odpověď.<br>
+                randint() vezme dva argumenty (itegery = celá čísla), aby věděl v jakém rozmezí má vrátit náhodné číslo.<br>
+            </p>
+            <p>Funkci s argumentem si také můžeš vztvořit sám:</p>
+            <p>
+                def scitani(a, b):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return a + b
+            </p>
+            <p>
+                scitani(input(), input())<br>
+                #tahle funkce už existuje a to ve stylovějším provedení: sum()
             </p>
           </div>
           <div class="lekce-obsah" id="d23">
             <h2>23. argv</h2>
-            <p>Pokud by si chtěl/a pythonem zpracovávat nějaký, třeba textový, soubor, <br>lze to udělat několika způsoby.<br>
-            Tady je jeden z nich. <br>
-            Aby fungval, musíš mít soubor, který chceš zpracovat, ve stejné složce jako svůj .py soubor.<br>
-            Naše zaklínadlo bude vypadat nějak takhle:<br>
-            from sys import argv<br>
-            program_name, file_name = argv<br><br><br>
-            file = open(file_name, 'r')<br>
-            for i in file:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;print('délka řádku:', len(i))<br><br>
-            #len() vrátí číslo - délku stringu nebo seznamu
+            <p>
+                Pokud by si chtěl/a pythonem zpracovávat nějaký, třeba textový, soubor, lze to udělat několika způsoby.<br>
+                Tady je jeden z nich.
+            </p>
+            <p>
+                Aby fungoval, musíš mít soubor, který chceš zpracovat, ve stejné složce jako svůj .py soubor.<br>
+                Naše zaklínadlo bude vypadat nějak takhle:
+            </p>
+            <p>
+                from sys import argv<br>
+                program_name, file_name = argv
+             </p>
+             <p>file = open(file_name, 'r')</p>
+             <p>
+                for i in file:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print('délka řádku:', len(i))<br>
+                #len() vrátí číslo - délku stringu nebo seznamu
             </p>
           </div>
           <div class="lekce-obsah" id="d24">
