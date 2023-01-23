@@ -436,7 +436,7 @@
             <p>a to tím způsobem, že napíšeš:</p>
             <p>
               číslo nebo název proměnné znak číslo/název proměnné<br>
-              a stiskneš Enter
+              a stiskneš Enter.
             </p>
             <p>např.:</p>
             <p>&#62;&#62;&#62; 21 + x</p>
@@ -678,53 +678,104 @@
           </div>
           <div class="lekce-obsah" id="d15">
             <h2>15. Příkazy break, continue</h2>
+            <p>
+                Příkaz break ukončí cyklus a continue nás vrátí na jeho začátek.
+                Ukázat si to můžeme na včerejším programu a na našem nejlepším kamarádovi:
+            </p>
+            <p>
+                counter = 30<br>
+                joke = ""<br>
+            </p>
+            <p>
+                while joke != "nenávidím tě":<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;if not joke:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(":|")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print("XD\n")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;if counter &#60; 0:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Už smíchy nemůžu dýchat... x_x")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;counter -= 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;# je to stejné jako by si napsal/a counter = counter - 1<br>
+                else:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print(":(")
+            </p>
           </div>
           <div class="lekce-obsah" id="d16">
             <h2>16. Seznamy</h2>
+            <p>
+                Z datových typů už známe integer, float, string a boolean (True/False).<br>
+                Další užitečný je seznam ("list").
+            </p>
+            <p>Vytvoříš ho takhle:</p>
+            <p>
+                nazev_seznamu = []&nbsp;&nbsp;&nbsp;&nbsp;# tohle je prázdný seznam<br>
+                zviratka = ['opicka', 'orangutan', 'papousek', 'clovek']
+            </p>
+            <p>Pokud chceš přidat něco nakonec seznamu, použij metodu .append().</p>
+            <p>zviratka.append('oslik')</p>
+            <p>
+                Seznam může obsahovat jakýkoliv datový typ, případně i další seznam.<br>
+                Pokud seznam jednou definuješ, vložíš do něj nějakou proměnnou a poté proměnnou změníš, v seznamu zůstane její starý obsah.
+            </p>
           </div>
           <div class="lekce-obsah" id="d17">
             <h2>17. For cyklus</h2>
+            <p>
+                For je také cyklus, podobně jako while, ale má omezený počet opakování.<br>
+                např.
+            </p>
+            <p>seznamek = []</p>
+            <p>
+                for i in range(20):<br>
+                # i je proměnná, která se při každém opakování cyklu mění na čísla od 0 do 19<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;seznamek.append(i)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print(*seznamek)<br>
+                # * nemusí být použitá, jen je poté výsledek čitelnější
+            </p>
+            <p>Stejný seznam můžeš vytvořit takhle:</p>
+            <p>hokus_pokus = [i for i in range(20)]</p>
           </div>
           <div class="lekce-obsah" id="d18">
             <h2>18. Lokální proměnné</h2>
+              <p>
+                Lokální proměnná je taková proměnná, která definovaná na omezenou dobu. Když splní svůj účel, zmizí.<br>
+                Takové proměnné najdeme třeba v cyklech a to konkrétně i ve for cyklu. Jsou definované pro každé jedno zopakování cyklu, ale když cyklus skončí, tak jsou znovu nedefinované.<br>
+                To ale neplatí, pokud proměnnou definujeme už před začátkem cyklu:
+            </p>
             <p>
-            Lokální proměnná je taková proměnná, která definovaná na omezenou dobu.<br>
-            Když splní svůj účel, zmizí.<br>
-            Takové proměnné najdeme třeba v cyklech a to konkrétně i ve for cyklu.<br>
-            To je definováno pro každé jedno zopakování cyklu, ale když cyklus skončí, tak je znovu nedefinována.<br>
-            To by ale neplatilo pokud bychom i definovali už předem:<br>
-            for i in range(5):<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;print(i)<br>
-            <br>
-            print(i)<br>
-            #vyskočí error, i is not defined<br>
-            #pokud ale i definujeme před for cyklem (např. i = None (None znamená, že proměnná bude existovat, ale bude prázdná)),<br>
-            #už z něj nebude lokální proměnná, ale globální proměnná a error nám nevyskočí
+                for i in range(5):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print(i)
+            </p>
+            <p>print(i)</p>
+            <p>
+                # vyskočí error, i is not defined<br>
+                # pokud ale proměnnou i definujeme před for cyklem (např. i = None - None znamená, že proměnná bude existovat, ale bude prázdná), už z něj nebude lokální proměnná, ale globální proměnná a error nám nevyskočí.
             </p>
           </div>
           <div class="lekce-obsah" id="d19">
             <h2>19. For cyklus pro seznamy</h2>
+            <p>For cyklus nemusíme použít jen na procházení po sobě jdoucích čísel, ale třeba i na procházení jednotlivých položek v seznamu.</p>
+            <p>to_do = ['ukol z matiky', 'koupit listek na ples', 'napsat si omluvenku', 'koupit darek fantovi']</p>
             <p>
-            For cyklus nemusíme použít jen na procházení po sobě jdoucích čísel,<br>
-            ale třeba i na procházení jednotlivých položek v seznamu.<br>
-            to_do = ['ukol z matiky', 'koupit listek na ples', 'napsat si omluvenku', 'koupit darek fantovi']<br><br>
-            for i in to_do:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;print(i)
-            &nbsp;&nbsp;&nbsp;&nbsp;if input('pokud to mas hotove napis ano, jinak napis ne') == 'ano':<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to_do.remove(i)<br><br>
-            print('Tohle všechno ti zbývá dodělat: ', *to_do)
+                for i in to_do:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print(i)
+                &nbsp;&nbsp;&nbsp;&nbsp;if input('pokud to mas hotove napis ano, jinak napis ne') == 'ano':<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to_do.remove(i)<br><br>
+                print('Tohle všechno ti zbývá dodělat: ', *to_do)
             </p>
           </div>
           <div class="lekce-obsah" id="d20">
             <h2>20. Index</h2>
             <p>
-            Věci v seznamech jsou očíslované od 0. Takovému číslu se říká index.<br>
-            Pokud chceme zavolat položku ze seznamu a víme na jaké pozici se nachází (= známe její index), stačí napsat toto:<br>
-            seznam[index]<br><br>
-            A vrátí se nám věc s tímto indexem.<br>
-            obj_sou = ['b', 'f', 'l', 'm', 'p', 's', 'v', 'z']<br>
-            obj_sou[5]<br>
-            vrátí 's'
+                Věci v seznamech jsou očíslované od 0. Takovému číslu se říká index.<br>
+                Pokud chceme zavolat položku ze seznamu, a víme, na jaké pozici se nachází (známe její index), stačí napsat:
+            </p>
+            <p>nazev_seznamu[index]</p>
+            <p>a vrátí se nám položka s tímto indexem.</p>
+            <p>
+                obj_sou = ['b', 'f', 'l', 'm', 'p', 's', 'v', 'z']<br>
+                obj_sou[5]&nbsp;&nbsp;&nbsp;&nbsp;# vrátí 's'
             </p>
           </div>
           <div class="lekce-obsah" id="d21">
@@ -790,30 +841,41 @@
           </div>
           <div class="lekce-obsah" id="d22">
             <h2>22. Argument</h2>
+            <p>Argument je parametr, který dáváš funkci, aby s tím mohla pracovat.</p>
+            <p>Příklady:</p>
             <p>
-            Argument je to, co dáváš funkci, aby s tím pracovala:<br>
-            Např.<br>
-            input() může vzít jeden argument (string), na který se zeptá dřív, než bude požadovat odpověď.<br>
-            randint() vezme dva argumenty (itegery = celá čísla), aby věděl v jakém rozmezí má být náhodné číslo<br>
-            vyzkoušit si vytvořit proměnnou s argumentem můžeš taky:<br>
-            def scitani(a, b):<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;return a + b<br><br>
-            scitani(input(), input())<br>
-            #tahle funkce už existuje a to ve stylovějším provedení: sum()
+                input() může vzít jeden argument (string), na který se zeptá dřív, než bude požadovat odpověď.<br>
+                randint() vezme dva argumenty (itegery = celá čísla), aby věděl v jakém rozmezí má vrátit náhodné číslo.<br>
+            </p>
+            <p>Funkci s argumentem si také můžeš vztvořit sám:</p>
+            <p>
+                def scitani(a, b):<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return a + b
+            </p>
+            <p>
+                scitani(input(), input())<br>
+                #tahle funkce už existuje a to ve stylovějším provedení: sum()
             </p>
           </div>
           <div class="lekce-obsah" id="d23">
             <h2>23. argv</h2>
-            <p>Pokud by si chtěl/a pythonem zpracovávat nějaký, třeba textový, soubor, <br>lze to udělat několika způsoby.<br>
-            Tady je jeden z nich. <br>
-            Aby fungval, musíš mít soubor, který chceš zpracovat, ve stejné složce jako svůj .py soubor.<br>
-            Naše zaklínadlo bude vypadat nějak takhle:<br>
-            from sys import argv<br>
-            program_name, file_name = argv<br><br><br>
-            file = open(file_name, 'r')<br>
-            for i in file:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;print('délka řádku:', len(i))<br><br>
-            #len() vrátí číslo - délku stringu nebo seznamu
+            <p>
+                Pokud by si chtěl/a pythonem zpracovávat nějaký, třeba textový, soubor, lze to udělat několika způsoby.<br>
+                Tady je jeden z nich.
+            </p>
+            <p>
+                Aby fungoval, musíš mít soubor, který chceš zpracovat, ve stejné složce jako svůj .py soubor.<br>
+                Naše zaklínadlo bude vypadat nějak takhle:
+            </p>
+            <p>
+                from sys import argv<br>
+                program_name, file_name = argv
+             </p>
+             <p>file = open(file_name, 'r')</p>
+             <p>
+                for i in file:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print('délka řádku:', len(i))<br>
+                #len() vrátí číslo - délku stringu nebo seznamu
             </p>
           </div>
           <div class="lekce-obsah" id="d24">
