@@ -1,6 +1,5 @@
 # adventni_kalendar_python
     Úkoly:
-    napsat obsah 1 - 24
     rozlozeni stranky
     vybrat font a barvy
     vyskakovaci okna:
