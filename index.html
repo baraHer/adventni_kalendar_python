@@ -670,12 +670,61 @@
           </div>
           <div class="lekce-obsah" id="d15">
             <h2>15. Příkazy break, continue</h2>
+            <p>
+                Příkaz break ukončí cyklus a continue se vrátí na jeho začátek.
+                Ukázat si to můžeme na včerejším programu a našem nejlepším kamarádovi:
+            </p>
+            <p>
+                counter = 30<br>
+                joke = ""<br>
+                while joke != "nenávidím tě":<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;if not joke:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(":|")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;continue<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print("XD\n")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;if counter &#60; 0:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print("Už smíchy nemůžu dýchat... x_x")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;counter -= 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;#je to stejné jako by si napsal/a counter = counter - 1<br>
+                else:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print(":(")
+            </p>
           </div>
           <div class="lekce-obsah" id="d16">
             <h2>16. Seznamy</h2>
+            <p>
+                Z datových typů už známe integer, float, string a boolean (True/False).<br>
+                Další užitečný je seznam ("list").
+            </p>
+            <p>Vytvoříš ho takhle:</p>
+            <p>
+                nazev_seznamu = []&nbsp;&nbsp;&nbsp;&nbsp;#tohle je prázdný seznam<br>
+                zviratka = ['opicka', 'orangutan', 'papousek', 'clovek']
+            </p>
+            <p>Pokud chceme přidat něco nakonec seznamu, použijeme metodu .append().</p>
+            <p>zviratka.append('oslik')</p>
+            <p>
+                Seznam může obsahovat jakýkoliv datový typ, případně i další seznam.<br>
+                Pokud seznam jednou definuješ, vložíš do něj nějakou proměnnou a poté proměnnou změníš, v seznamu zůstane její starý obsah.
+            </p>
           </div>
           <div class="lekce-obsah" id="d17">
             <h2>17. For cyklus</h2>
+            <p>
+                For je také cyklus, podobně jako while, ale na omezený počet opakování.<br>
+                např.
+            </p>
+            <p>seznamek = []</p>
+            <p>
+                for i in range(20):<br>
+                #i je proměnná, která se při každém opakování cyklu mění na čísla od 0 do 19<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;seznamek.append(i)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print(*seznamek)<br>
+                #* nemusí být použitá, jen je poté výsledek čitelnější
+            </p>
+            <p>Stejný seznam můžu vytvořit takhle:</p>
+            <p>hokus_pokus = [i for i in range(20)]</p>
           </div>
           <div class="lekce-obsah" id="d18">
             <h2>18. Lokální proměnné</h2>
