@@ -781,62 +781,67 @@
           <div class="lekce-obsah" id="d21">
             <h2>21. Funkce</h2>
             <p>
-            S některými funkcemi už ses setkal/a v minulých lekcích.<br>
-            např. print(), input(), randint() atd.<br>
-            Funkce něco berou (viz zítřejší lekce), pak něco zpracují, a něco vrátí, ale taky nemusí.<br>
-            Jak takovou funkci vyrobit?<br>
-            Hmm, dej mi chvilku, ...<br>
-            Možná můžeme zkusit tohle:<br>
-            from random import randint<br><br><br>
-            body = [0, 0, 0]    #[win, draw, lose]<br><br>
-            def play():<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;guess = input('kámen, nůžky, papír: ')<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;num = randint(0, 2)    #0 = nuzky, 1 = kamen, 2 = papir<br><br>
-            &nbsp;&nbsp;&nbsp;&nbsp;if guess == "kámen" or guess == "kamen" or guess == "šutr":<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 0:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[0] += 1<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('win')<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 1:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[1] += 1<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('draw')<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 2:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[2] += 1<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('lose')<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;elif guess == "nůžky" or guess == "nuzky":<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 2:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[0] += 1<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('win')<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 0:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[1] += 1<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('draw')<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 1:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[2] += 1<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('lose')<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;elif guess == "papír" or guess == "papir" or guess == "toaleťák":<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 1:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[0] += 1<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('win')<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 2:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[1] += 1<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('draw')<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 0:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[2] += 1<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('lose')<br>
-            <br>
-            &nbsp;&nbsp;&nbsp;&nbsp;print(f"vyhrál/a jsi {body[0]}x z {body[0] + body[1] + body[2]} her")<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;return body<br>
-            <br>
-            while True:<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;play()<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;print("pokud už nechceš hrát zmáčkni ctrl + c")<br>
-            <br>
-            #body = globální proměnná, guess a num jsou lokální proměnné<br>
-            <br>
-            takže pro shrnutí, funkci definuješ:<br>
-            def nazev_funkce():<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;kód s využitím toho, co znáš
-            &nbsp;&nbsp;&nbsp;&nbsp;nezapomeň každý řádek, který do funkce patří odsadit
-            &nbsp;&nbsp;&nbsp;&nbsp;i tady se tvoří lokální proměnné, jednou co program skončí se vymažou
+                S některými funkcemi už ses setkal/a v minulých lekcích. Např. print(), input(), randint() atd.<br>
+                Funkce něco vezmou (viz zítřejší lekce), pak něco zpracují, a něco vrátí, ale taky nemusí.
+            </p>
+            <p>
+                Jak takovou funkci vyrobit?<br>
+                Hmm, dej mi chvilku, ...<br>
+                Možná můžeme zkusit tohle:
+            </p>
+            <p>
+                from random import randint<br>
+                body = [0, 0, 0]    #[win, draw, lose]
+            </p>
+            <p>
+                def play():<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;guess = input('kámen, nůžky, papír: ')<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;num = randint(0, 2)    #0 = nuzky, 1 = kamen, 2 = papir<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;if guess == "kámen" or guess == "kamen" or guess == "šutr":<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 0:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[0] += 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('win')<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 1:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[1] += 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('draw')<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 2:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[2] += 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('lose')<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;elif guess == "nůžky" or guess == "nuzky":<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 2:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[0] += 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('win')<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 0:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[1] += 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('draw')<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 1:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[2] += 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('lose')<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;elif guess == "papír" or guess == "papir" or guess == "toaleťák":<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 1:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[0] += 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('win')<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 2:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[1] += 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('draw')<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if num == 0:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;body[2] += 1<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('lose')<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print(f"vyhrál/a jsi {body[0]}x z {body[0] + body[1] + body[2]} her")<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;return body
+            </p>
+            <p>
+                while True:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;play()<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;print("pokud už nechceš hrát zmáčkni ctrl + c")<br>
+                #body = globální proměnná, guess a num jsou lokální proměnné<br>
+            </p>
+            <p>
+                Takže pro shrnutí, funkci definuješ:<br>
+                def nazev_funkce():<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;kód s využitím toho, co znáš
+                &nbsp;&nbsp;&nbsp;&nbsp;nezapomeň každý řádek, který do funkce patří odsadit
+                &nbsp;&nbsp;&nbsp;&nbsp;i tady se tvoří lokální proměnné, jednou co program skončí se vymažou
             </p>
           </div>
           <div class="lekce-obsah" id="d22">
