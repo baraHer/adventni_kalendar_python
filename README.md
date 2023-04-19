@@ -1,13 +1,4 @@
 # adventni_kalendar_python
-    Úkoly:
-    barvy podle dnu
-    vyskakovaci okna:
-        grafika
-        rozlozeni
-        lekce 21. - aby nepretekala
-    responzivita
-    
-    barvy
-    včera - 81DB57
-    dnes - 0AFF16
-    zítra - 126915
+    Každý den lze otevřít nové okénko s krátkou lekcí pythonu
+    Okénka se otevírají kliknutím na příslušný sloupec textu
+    Okénko nelze otevřít dříve, než nastalo příslušné datum
